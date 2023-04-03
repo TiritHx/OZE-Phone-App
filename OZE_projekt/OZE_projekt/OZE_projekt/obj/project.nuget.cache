@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "1wuL5/u6M662tl55wLXQr3vMTT9/LQQFxv9bquXJ5JaGKChGHYb2wZ5m8X8B6VySSkekPhKP8+tc7chBY2GohA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Egzamin\\source\\repos\\OZE_projekt\\OZE_projekt\\OZE_projekt\\OZE_projekt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Egzamin\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Egzamin\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Egzamin\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Egzamin\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\Egzamin\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
