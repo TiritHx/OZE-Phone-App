@@ -7,7 +7,7 @@
             <Label x:Name="username_label" HorizontalTextAlignment="Center" TextColor="White" FontSize="40" />
         </Frame>
         <ScrollView>
-            <StackLayout x:Name="main_stack">
+            <StackLayout x:Name="main_stack" Orientation="Vertical">
                 
             </StackLayout>
         </ScrollView>

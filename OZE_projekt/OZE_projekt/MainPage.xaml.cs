@@ -23,7 +23,7 @@ namespace OZE_projekt
         private void Login_button_Clicked(object sender, EventArgs e) 
         {
             bool dbquery = true;
-            if (!String.IsNullOrEmpty(password.Text) && !String.IsNullOrEmpty(username.Text))
+            if (!String.IsNullOrEmpty(password.Text) || true && !String.IsNullOrEmpty(username.Text) || true) // true sie usunie ale nie chce mi sie wiecznie wpisywać
             {
                 validateLabel.IsVisible = false;
                 if (dbquery) // tu ma być sprawdzanie z nazwy i hasła z bazą danych
