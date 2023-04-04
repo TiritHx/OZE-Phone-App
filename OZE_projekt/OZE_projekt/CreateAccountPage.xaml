@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OZE_projekt.CreateAccountPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Tworzenie konta" HorizontalTextAlignment="Center" TextColor="White" FontSize="40"/>
+        </Frame>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="10" Margin="20,30,20,15">
+            <StackLayout>
+
+                <Label Text="Podaj nazwę" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
+                <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
+                    <Entry x:Name="username" Background="white" TextColor="Black" />
+                </Frame>
+
+                <Label Text="Podaj hasło" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
+                <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
+                    <Entry x:Name="password" Background="white" TextColor="Black" TextChanged="Validate" Unfocused="Validate" Focused="Validate" />
+                </Frame>
+
+                <Label Text="Powtórz hasło" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
+                <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
+                    <Entry x:Name="repeat_password" Background="white" TextColor="Black" TextChanged="Validate" Unfocused="Validate" Focused="Validate" /> 
+                </Frame>
+                
+                <Label x:Name="validateLabel" Text="Hasła nie są takie same" IsVisible="false" HorizontalTextAlignment="Center" TextColor="white" FontSize="20" />
+
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="10" Margin="20,15,20,30" >
+            <Button x:Name="create_account_button" Clicked="Create_account_button_Clicked" Text="Utwórz nowe konto" Background="#2196F3" FontSize="25" TextColor="white" IsEnabled="True" />
+        </Frame>
+
+    </StackLayout>
+</ContentPage>

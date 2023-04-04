@@ -1,0 +1,17 @@
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\bin\Debug\netstandard2.0\OZE_projekt.deps.json
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\bin\Debug\netstandard2.0\OZE_projekt.dll
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\bin\Debug\netstandard2.0\OZE_projekt.pdb
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\OZE_projekt.csproj.AssemblyReference.cache
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\OZE_projekt.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\OZE_projekt.AssemblyInfoInputs.cache
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\OZE_projekt.AssemblyInfo.cs
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\OZE_projekt.csproj.CoreCompileInputs.cache
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\OZE_projekt.dll
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\refint\OZE_projekt.dll
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\OZE_projekt.pdb
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\ref\OZE_projekt.dll
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\CreateAccountPage.xaml.g.cs
+C:\Users\Egzamin\source\repos\OZE_projekt\OZE_projekt\OZE_projekt\obj\Debug\netstandard2.0\CentralPage.xaml.g.cs

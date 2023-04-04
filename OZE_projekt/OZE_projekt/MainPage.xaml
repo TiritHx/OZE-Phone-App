@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OZE_projekt.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="HydroSpark" HorizontalTextAlignment="Center" TextColor="White" FontSize="45"/>
+        </Frame>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="10" Margin="20,40,20,20">
+            <StackLayout>
+                
+                <Label Text="Podaj nazwę" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
+                <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
+                    <Entry x:Name="username" Background="white" />
+                </Frame>
+
+                <Label Text="Podaj hasło" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
+                <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
+                    <Entry x:Name="password" Background="white" />
+                </Frame>
+
+                <Label x:Name="validateLabel" Text="Dane są niepoprawne" IsVisible="false" HorizontalTextAlignment="Center" TextColor="white" FontSize="20" />
+
+            </StackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="white" Padding="0" CornerRadius="10" Margin="20,15,20,15" >
+            <Button Clicked="Login_button_Clicked" Text="Zaloguj się" Background="#2196F3" FontSize="25" TextColor="white" />
+        </Frame>
+
+        <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="10" Margin="20,15,20,30" >
+            <Button Clicked="New_account_button_Clicked" Text="Utwórz konto" Background="#2196F3" FontSize="25" TextColor="white" />
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
