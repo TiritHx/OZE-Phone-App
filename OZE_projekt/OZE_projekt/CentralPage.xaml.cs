@@ -21,13 +21,13 @@ namespace OZE_projekt
         {
             InitializeComponent();
 			username_label.Text = "Witaj "+username;
-			Create_Item(username, "Turbina nr 1", "1234567890" , 220 , 1790 ); //todo: zrobic loopa for each ale jaka tablicą jeszcze myśle
-            Create_Item(username, "Turbina nr 2", "1234567890", 240, 2090);
-            Create_Item(username, "Turbina nr 3", "1234567890", 300, 1830);
-            Create_Item(username, "Turbina nr 4", "1234567890", 20, 185);
-            Create_Item(username, "Turbina nr 5", "1234567890", 0, 90);
-            Create_Item(username, "Turbina nr 6", "1234567890", 57, 673);
-            Create_Item(username, "Turbina nr 7", "1234567890", 401, 2703);
+			Create_Item("03248048423987", "Turbina nr 1", "1234567890" , 220 , 1790 ); //todo: zrobic loopa for each ale jaka tablicą jeszcze myśle
+            Create_Item("54987593878454", "Turbina nr 2", "1234567890", 240, 2090);
+            Create_Item("92371643984738", "Turbina nr 3", "1234567890", 300, 1830);
+            Create_Item("62230940954594", "Turbina nr 4", "1234567890", 20, 185);
+            Create_Item("79238497493998", "Turbina nr 5", "1234567890", 0, 90);
+            Create_Item("68934983477483", "Turbina nr 6", "1234567890", 57, 673);
+            Create_Item("24234673247777", "Turbina nr 7", "1234567890", 401, 2703);
         }
 
 		public void Create_Item(string id, string name, string password, int last_hour_voltage, int last_day_voltage) 
@@ -37,14 +37,35 @@ namespace OZE_projekt
 
 			StackLayout new_stack = new StackLayout
 			{
-				HorizontalOptions = LayoutOptions.Center,
-				VerticalOptions = LayoutOptions.Center,
+				//HorizontalOptions = LayoutOptions.Center,
+				//VerticalOptions = LayoutOptions.Center,
 				BackgroundColor = Color.FromHex("#2196F3"),
 				Orientation = StackOrientation.Vertical,
-				Margin = new Thickness(20, 15, 20, 15),
+				//Margin = new Thickness(20, 15),
 				Children =
 				{
-					new Label
+					new StackLayout
+					{
+						Margin = new Thickness(-20, -20, -20, -20),
+						BackgroundColor = Color.FromHsla(0, 100, 100, 0), // 0, 100, 100, 0.2 tak też jest git
+						VerticalOptions = LayoutOptions.Start,
+						Children =
+						{
+							new ImageButton
+							{
+								HorizontalOptions= LayoutOptions.End, // end - prawa strona, start - lewa strona
+								Source = "cog_wheel2.png",
+                                BackgroundColor = Color.Transparent,
+								HeightRequest = 35,
+								WidthRequest = 35,
+								Margin = new Thickness(5)
+								//Clicked = {} clicked nie istnieje        NIE ISTNIEJE
+								// trzeba robić jakąś wy.....wistą funkcje => https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/imagebutton
+								// może gesturerecognizers zadziała, dowiem sie w swoim czasie ¯\_(ツ)_/¯
+                            }
+                        }
+                    },
+                    new Label
 					{
 						Text = name,
 						TextColor = Color.White,
@@ -52,15 +73,25 @@ namespace OZE_projekt
 						VerticalTextAlignment = TextAlignment.Center,
 						FontSize = 30
 					},
+					new Label
+					{
+						Text = "ID: "+id,
+                        TextColor = Color.White,
+                        HorizontalTextAlignment = TextAlignment.Center,
+                        VerticalTextAlignment = TextAlignment.Center,
+                        FontSize = 15
+                    }
+					,
 					new Frame
 					{
-                        BackgroundColor = Color.Transparent,
+                        BackgroundColor = Color.FromHsla(0, 100, 100, 0.7),
+						//Margin = new Thickness(-50, 0), // -100 , 0 jest ciekawe
                         CornerRadius = 10,
 						Content =
 							new StackLayout
 							{
 								Orientation = StackOrientation.Vertical,
-								Margin = new Thickness(0), // do usunięcia lub zmiany idk yet
+								//Padding = new Thickness(-40, 0), // this padding funny tho
 								BackgroundColor = Color.Transparent,
                                 Children =
 								{
@@ -105,6 +136,11 @@ namespace OZE_projekt
 				Content = new_stack
 			};
 			main_stack.Children.Add(new_frame);
+        }
+
+        private void Edit_button_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -8,7 +8,7 @@
         </Frame>
         <ScrollView>
             <StackLayout x:Name="main_stack" Orientation="Vertical">
-                
+               
             </StackLayout>
         </ScrollView>
     </StackLayout>
