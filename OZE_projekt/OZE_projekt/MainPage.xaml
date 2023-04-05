@@ -4,10 +4,10 @@
              x:Class="OZE_projekt.MainPage">
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="#B38FFF" Padding="24" CornerRadius="0">
             <Label Text="HydroSpark" HorizontalTextAlignment="Center" TextColor="White" FontSize="45"/>
         </Frame>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="10" Margin="20,40,20,20">
+        <Frame BackgroundColor="#B38FFF" Padding="24" CornerRadius="10" Margin="20,40,20,20">
             <StackLayout>
                 
                 <Label Text="Podaj nazwę" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
@@ -26,11 +26,11 @@
         </Frame>
 
         <Frame BackgroundColor="white" Padding="0" CornerRadius="10" Margin="20,15,20,15" >
-            <Button Clicked="Login_button_Clicked" Text="Zaloguj się" Background="#2196F3" FontSize="25" TextColor="white" />
+            <Button Clicked="Login_button_Clicked" Text="Zaloguj się" Background="#B38FFF" FontSize="25" TextColor="white" />
         </Frame>
 
-        <Frame BackgroundColor="#2196F3" Padding="0" CornerRadius="10" Margin="20,15,20,30" >
-            <Button Clicked="New_account_button_Clicked" Text="Utwórz konto" Background="#2196F3" FontSize="25" TextColor="white" />
+        <Frame BackgroundColor="#B38FFF" Padding="0" CornerRadius="10" Margin="20,15,20,30" >
+            <Button Clicked="New_account_button_Clicked" Text="Utwórz konto" Background="#B38FFF" FontSize="25" TextColor="white" />
         </Frame>
 
     </StackLayout>

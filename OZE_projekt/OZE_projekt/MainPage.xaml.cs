@@ -28,7 +28,7 @@ namespace OZE_projekt
                 validateLabel.IsVisible = false;
                 if (dbquery) // tu ma być sprawdzanie z nazwy i hasła z bazą danych
                 {
-                    Navigation.PushAsync(new CentralPage(username.Text));
+                    Navigation.PushAsync(new CenterPage(username.Text)); // kiedyś CentralPage
                 }
                 else
                 {

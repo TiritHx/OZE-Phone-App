@@ -39,7 +39,7 @@ namespace OZE_projekt
             if(!String.IsNullOrEmpty(password.Text) && !String.IsNullOrEmpty(repeat_password.Text) && !String.IsNullOrEmpty(username.Text))
             {
                 validateLabel.IsVisible = false;
-                Navigation.PushAsync(new CentralPage(username.Text));
+                Navigation.PushAsync(new CenterPage(username.Text)); // kiedyś CentralPage
             }
             else
             {

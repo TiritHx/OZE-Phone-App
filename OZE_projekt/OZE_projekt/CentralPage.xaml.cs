@@ -12,7 +12,15 @@ namespace OZE_projekt
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class CentralPage : ContentPage
 	{
-		public CentralPage ()
+
+        public class ReturnedData
+        {
+            public string Id { get; set; }
+            public string Name { get; set; }
+            public int Voltage { get; set; }
+        }
+
+        public CentralPage ()
 		{
 			InitializeComponent ();
 		}
@@ -21,48 +29,57 @@ namespace OZE_projekt
         {
             InitializeComponent();
 			username_label.Text = "Witaj "+username;
-			Create_Item("03248048423987", "Turbina nr 1", "1234567890" , 220 , 1790 ); //todo: zrobic loopa for each ale jaka tablicą jeszcze myśle
-            Create_Item("54987593878454", "Turbina nr 2", "1234567890", 240, 2090);
-            Create_Item("92371643984738", "Turbina nr 3", "1234567890", 300, 1830);
-            Create_Item("62230940954594", "Turbina nr 4", "1234567890", 20, 185);
-            Create_Item("79238497493998", "Turbina nr 5", "1234567890", 0, 90);
-            Create_Item("68934983477483", "Turbina nr 6", "1234567890", 57, 673);
-            Create_Item("24234673247777", "Turbina nr 7", "1234567890", 401, 2703);
+			ReturnedData[] data = new ReturnedData[]
+			{
+                new ReturnedData {Id = "03248048423987", Name = "Turbina nr 1", Voltage = 220},
+				new ReturnedData {Id = "54987593878454", Name = "Turbina nr 2", Voltage = 240},
+				new ReturnedData {Id = "92371643984738", Name = "Turbina nr 3", Voltage = 300},
+				new ReturnedData {Id = "62230940954594", Name = "Turbina nr 4", Voltage = 20},
+				new ReturnedData {Id = "78787858423987", Name = "Turbina nr 5", Voltage = 0},
+				new ReturnedData {Id = "02845576873987", Name = "Turbina nr 6", Voltage = 500},
+            };
+
+			foreach (var item in data)
+			{
+				Create_Item(item.Id ,item.Name, item.Voltage);
+			}
         }
 
-		public void Create_Item(string id, string name, string password, int last_hour_voltage, int last_day_voltage) 
+		public void Create_Item(string id, string name, int voltage) 
 		{
-			//int last_hour_voltage = 220; // tu będzie podłączenie z bazą danych lub pompą żeby dostać informacje o prądzie itd
-			//int last_day_voltage = 1790; // te zmienne jeszcze są do zmiany, sa tylko tymczasowe
+            ImageButton button1 = new ImageButton
+            {
+                HorizontalOptions = LayoutOptions.End, // end - prawa strona, start - lewa strona
+                Source = "cog_wheel2.png",
+                BackgroundColor = Color.Transparent,
+                HeightRequest = 35,
+                WidthRequest = 35,
+                Margin = new Thickness(5)
+            };
 
-			StackLayout new_stack = new StackLayout
+            button1.Clicked += (sender, args) =>
+            {
+                DisplayAlert("Hello", "Welcome to Xamarin.Forms", "OK");
+            };
+
+            StackLayout new_stack = new StackLayout
 			{
 				//HorizontalOptions = LayoutOptions.Center,
 				//VerticalOptions = LayoutOptions.Center,
-				BackgroundColor = Color.FromHex("#2196F3"),
+				BackgroundColor = Color.FromHex("#B38FFF"),
 				Orientation = StackOrientation.Vertical,
 				//Margin = new Thickness(20, 15),
 				Children =
 				{
 					new StackLayout
 					{
-						Margin = new Thickness(-20, -20, -20, -20),
+						Margin = new Thickness(-20, -20, -20, -20), //-20, -20, -20, 0 tak też jest git
 						BackgroundColor = Color.FromHsla(0, 100, 100, 0), // 0, 100, 100, 0.2 tak też jest git
 						VerticalOptions = LayoutOptions.Start,
 						Children =
 						{
-							new ImageButton
-							{
-								HorizontalOptions= LayoutOptions.End, // end - prawa strona, start - lewa strona
-								Source = "cog_wheel2.png",
-                                BackgroundColor = Color.Transparent,
-								HeightRequest = 35,
-								WidthRequest = 35,
-								Margin = new Thickness(5)
-								//Clicked = {} clicked nie istnieje        NIE ISTNIEJE
-								// trzeba robić jakąś wy.....wistą funkcje => https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/imagebutton
-								// może gesturerecognizers zadziała, dowiem sie w swoim czasie ¯\_(ツ)_/¯
-                            }
+							button1
+								
                         }
                     },
                     new Label
@@ -99,7 +116,7 @@ namespace OZE_projekt
 									{
 										Content = new Label
 										{
-											Text = "1h: " + last_hour_voltage + "V",
+											Text = voltage + "Wh",
 											FontSize = 20,
 											VerticalTextAlignment = TextAlignment.Center,
 											HorizontalTextAlignment = TextAlignment.Center,
@@ -107,20 +124,6 @@ namespace OZE_projekt
 										},
                                         CornerRadius = 10,
                                         BackgroundColor = Color.White,
-                                        Margin = new Thickness(5)
-                                    },
-									new Frame
-									{
-										Content = new Label
-										{
-											Text = "24h: " + last_day_voltage + "V",
-											FontSize = 20,
-											VerticalTextAlignment = TextAlignment.Center,
-											HorizontalTextAlignment = TextAlignment.Center,
-                                            Margin = new Thickness(0) //trzeba poprawić marginesy
-                                        },
-										CornerRadius = 10,
-										BackgroundColor = Color.White,
                                         Margin = new Thickness(5)
                                     }
 								}
@@ -130,7 +133,7 @@ namespace OZE_projekt
 			};
 			Frame new_frame = new Frame 
 			{
-				BackgroundColor = Color.FromHex("#2196F3"),
+				BackgroundColor = Color.FromHex("#B38FFF"),
                 Margin = new Thickness(20, 20, 20, 0),
                 CornerRadius = 10,
 				Content = new_stack
