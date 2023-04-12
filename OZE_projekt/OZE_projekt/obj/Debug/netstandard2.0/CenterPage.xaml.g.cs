@@ -14,15 +14,15 @@ namespace OZE_projekt {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("CenterPage.xaml")]
-    public partial class CenterPage : global::Xamarin.Forms.ContentPage {
+    public partial class CenterPage : global::Xamarin.Forms.MasterDetailPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label username_label;
+        private global::Xamarin.Forms.ListView MenuList;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CenterPage));
-            username_label = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "username_label");
+            MenuList = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ListView>(this, "MenuList");
         }
     }
 }

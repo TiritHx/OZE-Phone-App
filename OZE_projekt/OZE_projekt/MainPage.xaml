@@ -17,7 +17,7 @@
 
                 <Label Text="Podaj hasło" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
                 <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
-                    <Entry x:Name="password" Background="white" />
+                    <Entry x:Name="password" Background="white" IsPassword="True"/>
                 </Frame>
 
                 <Label x:Name="validateLabel" Text="Dane są niepoprawne" IsVisible="false" HorizontalTextAlignment="Center" TextColor="white" FontSize="20" />

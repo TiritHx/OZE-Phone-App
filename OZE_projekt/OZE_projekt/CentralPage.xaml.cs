@@ -59,7 +59,8 @@ namespace OZE_projekt
 
             button1.Clicked += (sender, args) =>
             {
-                DisplayAlert("Hello", "Welcome to Xamarin.Forms", "OK");
+				//DisplayAlert("Hello", "Welcome to Xamarin.Forms", "OK");
+				Navigation.PushAsync(new DevicePage(name, id)); 
             };
 
             StackLayout new_stack = new StackLayout

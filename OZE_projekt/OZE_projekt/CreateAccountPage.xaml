@@ -16,12 +16,12 @@
 
                 <Label Text="Podaj hasło" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
                 <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
-                    <Entry x:Name="password" Background="white" TextColor="Black" TextChanged="Validate" Unfocused="Validate" Focused="Validate" />
+                    <Entry x:Name="password" Background="white" IsPassword="True" TextColor="Black" TextChanged="Validate" Unfocused="Validate" Focused="Validate" />
                 </Frame>
 
                 <Label Text="Powtórz hasło" HorizontalTextAlignment="Center" TextColor="white" FontSize="25" />
                 <Frame BackgroundColor="white" Padding="0" CornerRadius="10">
-                    <Entry x:Name="repeat_password" Background="white" TextColor="Black" TextChanged="Validate" Unfocused="Validate" Focused="Validate" /> 
+                    <Entry x:Name="repeat_password" Background="white" IsPassword="True" TextColor="Black" TextChanged="Validate" Unfocused="Validate" Focused="Validate" /> 
                 </Frame>
                 
                 <Label x:Name="validateLabel" Text="Hasła nie są takie same" IsVisible="false" HorizontalTextAlignment="Center" TextColor="white" FontSize="20" />
