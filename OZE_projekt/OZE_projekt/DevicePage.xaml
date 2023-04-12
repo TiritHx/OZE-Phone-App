@@ -4,17 +4,17 @@
              x:Class="OZE_projekt.DevicePage">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor="#B38FFF" CornerRadius="0">
-                <Label Text="Ustawienia" FontSize="50" TextColor="White" HorizontalTextAlignment="Center" />
-            </Frame>
-            <ScrollView>
-                <StackLayout>
-                    <StackLayout>
-                        <Label x:Name="DeviceNameLabel" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center" />
-                        <Label x:Name="DeviceIdLabel" FontSize="29" TextColor="Black" HorizontalTextAlignment="Center" />
-                    </StackLayout>
+            <StackLayout BackgroundColor="#B38FFF" Margin="0,-20,0,0">
+                <Label Text="Ustawienia" FontSize="50" TextColor="White" HorizontalTextAlignment="Center" Margin="10" />
+                <Label x:Name="DeviceIdLabel" FontSize="29" TextColor="White" HorizontalTextAlignment="Center" Margin="10" />
+            </StackLayout>
+            <StackLayout Margin="10">
+                <StackLayout Orientation="Horizontal">
+                    <Label x:Name="DeviceNameLabel" FontSize="30" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" />
+                    <Entry x:Name="DeviceNewName" FontSize="30" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" IsVisible="False" />
+                    <ImageButton Clicked="Change_device_name_Button_Clicked" BackgroundColor="Transparent" HeightRequest="30" WidthRequest="30" Source="cog_wheel" VerticalOptions="Center" Margin="25,0,0,0" HorizontalOptions="End" />
                 </StackLayout>
-            </ScrollView>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

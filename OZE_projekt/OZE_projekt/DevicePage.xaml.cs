@@ -23,5 +23,20 @@ namespace OZE_projekt
             DeviceNameLabel.Text = "Nazwa: "+ DeviceName;
             DeviceIdLabel.Text = "Id: " + DeviceId;
         }
+
+        private void Change_device_name_Button_Clicked(object sender, EventArgs e)
+        {
+            DeviceNewName.Text = DeviceNameLabel.Text.Substring(6, DeviceNameLabel.Text.Length - 2);
+            if (DeviceNameLabel.IsVisible)
+            {
+                DeviceNameLabel.IsVisible = false;
+                DeviceNewName.IsVisible = true;
+            }
+            else
+            {
+                DeviceNameLabel.IsVisible = true;
+                DeviceNewName.IsVisible = false;
+            }
+        }
     }
 }
